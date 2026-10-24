@@ -1,0 +1,222 @@
+{
+  "users": [
+    {
+      "id": "U001",
+      "username": "admin",
+      "password": "123456",
+      "name": "超级管理员",
+      "role": "管理员",
+      "phone": "13800000001",
+      "status": "在职"
+    },
+    {
+      "id": "U002",
+      "username": "wang123",
+      "password": "123456",
+      "name": "王师傅",
+      "role": "维修工",
+      "phone": "13800000002",
+      "status": "在职"
+    },
+    {
+      "id": "U003",
+      "username": "xiao123",
+      "password": "123456",
+      "name": "小时",
+      "role": "客服",
+      "phone": "13800000003",
+      "status": "在职"
+    },
+    {
+      "id": "U004",
+      "username": "manager",
+      "password": "123456",
+      "name": "王经理",
+      "role": "物业经理",
+      "phone": "13800000004",
+      "status": "在职"
+    }
+  ],
+  "communities": [
+    {
+      "id": "C001",
+      "name": "阳光花园",
+      "buildings": 12,
+      "address": "浦东新区锦绣路",
+      "leader": "王经理",
+      "leaderId": "U004"
+    },
+    {
+      "id": "C002",
+      "name": "碧水湾",
+      "buildings": 8,
+      "address": "徐汇区龙腾大道",
+      "leader": "王经理",
+      "leaderId": "U004"
+    },
+    {
+      "id": "C003",
+      "name": "翠湖天地",
+      "buildings": 13,
+      "address": "黄浦区湖滨路",
+      "leader": "王经理",
+      "leaderId": "U004"
+    }
+  ],
+  "repair_orders": [
+    {
+      "id": "O001",
+      "reporter": "陈女士",
+      "room": "3-502",
+      "type": "水管",
+      "category": "报修",
+      "priority": "普通",
+      "status": "已完成",
+      "assigned": "王师傅",
+      "content": "厨房水管漏水",
+      "submitTime": "2026-10-20 10:00:00",
+      "logs": [
+        {"time": "2026-10-20 10:00:00", "operator": "陈女士", "action": "创建工单"},
+        {"time": "2026-10-20 10:30:00", "operator": "超级管理员", "action": "分配工单", "content": "分配给王师傅"},
+        {"time": "2026-10-20 14:00:00", "operator": "王师傅", "action": "完成工单"}
+      ]
+    },
+    {
+      "id": "O002",
+      "reporter": "赵先生",
+      "room": "7-201",
+      "type": "电路",
+      "category": "报修",
+      "priority": "高",
+      "status": "待分配",
+      "assigned": "",
+      "content": "主卧插座跳闸",
+      "submitTime": "2026-10-22 09:15:00",
+      "logs": [
+        {"time": "2026-10-22 09:15:00", "operator": "赵先生", "action": "创建工单"}
+      ]
+    },
+    {
+      "id": "O003",
+      "reporter": "周先生",
+      "room": "2-101",
+      "type": "噪音投诉",
+      "category": "投诉",
+      "priority": "紧急",
+      "status": "处理中",
+      "assigned": "小时",
+      "content": "楼上装修噪音扰民",
+      "submitTime": "2026-10-21 18:00:00",
+      "logs": [
+        {"time": "2026-10-21 18:00:00", "operator": "周先生", "action": "创建工单"},
+        {"time": "2026-10-21 18:20:00", "operator": "超级管理员", "action": "分配工单", "content": "分配给小时"}
+      ]
+    }
+  ],
+  "owners": [
+    {
+      "id": "OW001",
+      "name": "陈女士",
+      "phone": "13912345678",
+      "house": "阳光花园 3-502",
+      "status": "已认证",
+      "checkin": "2024-05-01"
+    },
+    {
+      "id": "OW002",
+      "name": "赵先生",
+      "phone": "13887654321",
+      "house": "阳光花园 7-201",
+      "status": "已认证",
+      "checkin": "2025-01-15"
+    },
+    {
+      "id": "OW003",
+      "name": "周先生",
+      "phone": "13711112222",
+      "house": "碧水湾 2-101",
+      "status": "待审核",
+      "checkin": "2026-10-01"
+    }
+  ],
+  "billing_items": [
+    {
+      "id": "B001",
+      "name": "物业费",
+      "method": "按面积",
+      "price": "2.8",
+      "status": "启用"
+    },
+    {
+      "id": "B002",
+      "name": "水费",
+      "method": "按用量",
+      "price": "4.5",
+      "status": "启用"
+    },
+    {
+      "id": "B003",
+      "name": "停车月卡",
+      "method": "月卡",
+      "price": "300",
+      "status": "停用"
+    }
+  ],
+  "unpaid_bills": [
+    {
+      "id": "BL001",
+      "room": "阳光花园 3-502",
+      "item": "物业费",
+      "amount": 359.8,
+      "due": "2026-10-31",
+      "status": "未缴",
+      "paidAt": ""
+    },
+    {
+      "id": "BL002",
+      "room": "碧水湾 2-101",
+      "item": "水费",
+      "amount": 90.0,
+      "due": "2026-10-25",
+      "status": "已缴",
+      "paidAt": "2026-10-22 11:00:00"
+    }
+  ],
+  "devices": [
+    {
+      "id": "D001",
+      "name": "东门门禁",
+      "type": "门禁",
+      "status": "在线",
+      "location": "阳光花园东门",
+      "lastOnline": "2026-10-22 12:00:00"
+    },
+    {
+      "id": "D002",
+      "name": "地库监控A",
+      "type": "监控",
+      "status": "离线",
+      "location": "碧水湾地下车库",
+      "lastOnline": "2026-10-20 08:00:00"
+    }
+  ],
+  "patrol_routes": [
+    {
+      "id": "P001",
+      "name": "夜间安全巡逻A线",
+      "points": 10,
+      "status": "启用",
+      "done": 5,
+      "total": 10
+    }
+  ],
+  "automation_test_cases": {
+    "repair_flow": {
+      "reporter": "张业主",
+      "repair_type": "水管",
+      "description": "厨房水管爆裂，需要紧急处理",
+      "assign_to": "王师傅",
+      "expected_status": "处理中"
+    }
+  }
+}

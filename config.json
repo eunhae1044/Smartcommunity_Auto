@@ -1,0 +1,15 @@
+{
+  "project_name": "智慧社区物业系统",
+  "base_url": "https://httpbin.org",
+  "login_api": "/post",
+
+  "front_url": "file:///D:/workbuddy/Smartcommunity_Auto/项目信息/社区服务前台.html",
+  "backend_url": "file:///D:/workbuddy/Smartcommunity_Auto/项目信息/智慧社区服务平台2.0.html",
+
+  "front_user": "zhangyezhu",
+  "front_pwd": "123456",
+  "admin_user": "admin",
+  "admin_pwd": "123456",
+
+  "timeout": 10
+}
